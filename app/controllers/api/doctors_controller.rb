@@ -30,12 +30,14 @@ class Api::DoctorsController < ApplicationController
       @doctor.destroy 
       render json: { message: 'Doctor Deleled'}
     end
+
+    
     private 
     def set_doctor
       @doctor = Doctor.find(params[:id])
     end
     def doctor_params
-      params.require(:doctor).permit(:first, :last, :phone, :note, :imag )
+      params.require(:doctor).permit(:first, :last, :title, :special, :imag )
     end
     
   end

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
   
-  validates :first, :last, :phone, :note, :imag, presence: true 
+  validates :first, :last, :phone, :note, :image, presence: true 
   
 end

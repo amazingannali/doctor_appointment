@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import DoctorList from './DoctorList';
 import DoctorForm from './DoctorForm';
-import { Button, Modal } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { MainBtn } from '../styles/shared';
 
 const Doctors = () => {
@@ -11,7 +11,7 @@ const Doctors = () => {
   const [ adding, setAdd ] = useState(false)
   
   useEffect( () => {
-    axios.get('/api/doctorses')
+    axios.get('/api/doctorses/${id}')
      .then( res => {
        setDoctors(res.data)
      })
