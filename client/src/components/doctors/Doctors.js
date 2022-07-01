@@ -6,12 +6,11 @@ import { Modal } from 'react-bootstrap';
 import { MainBtn } from '../styles/shared';
 
 const Doctors = () => {
-
   const [ doctors, setDoctors] = useState ([])
   const [ adding, setAdd ] = useState(false)
   
   useEffect( () => {
-    axios.get('/api/doctorses/${id}')
+    axios.get('/api/doctors')
      .then( res => {
        setDoctors(res.data)
      })
@@ -19,7 +18,7 @@ const Doctors = () => {
   }, [])
 
   const addDoctor = (doctor) => {
-    axios.post('/api/docotrs', { doctor })
+    axios.post('/api/doctors', { doctor })
      .then(res => {
        setDoctors([...doctors, res.data])
      })
@@ -56,7 +55,6 @@ return (
 
           <Modal show={adding} onHide={() => setAdd(false)}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <DoctorForm 

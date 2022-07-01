@@ -6,19 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first
 
-User.delete_all
 Doctor.delete_all
-
-5.times do 
-  User.create(
-   first: Faker::Name.first_name,
-   last: Faker::Name.last_name,
-   phone: Faker::PhoneNumber.cell_phone,
-   imag: Faker::Internet.url , 
-   note: Faker::Lorem.word,
-
-  )
-end
+User.delete_all
 
 5.times do 
   Doctor.create(
@@ -26,7 +15,18 @@ end
    last: Faker::Name.last_name,
    title: Faker::Types.rb_string,
    imag: Faker::Internet.url , 
-   special: Faker::Lorem.word,
+   special: Faker::Lorem.word
+
+  )
+end
+
+5.times do 
+  User.create(
+   first: Faker::Name.first_name,
+   last: Faker::Name.last_name,
+   phone: Faker::PhoneNumber.cell_phone,
+   image: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+   note: Faker::Lorem.word
 
   )
 end

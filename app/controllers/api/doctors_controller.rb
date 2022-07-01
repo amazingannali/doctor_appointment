@@ -1,5 +1,5 @@
 class Api::DoctorsController < ApplicationController
-  before_actionc:set_doctor, only [:show, :update, :destroy]
+  before_action :set_doctor, only: [:show, :update, :destroy]
     def index
       render json: Doctor.all
     end
@@ -40,5 +40,5 @@ class Api::DoctorsController < ApplicationController
       params.require(:doctor).permit(:first, :last, :title, :special, :imag )
     end
     
-  end
+  
 end
