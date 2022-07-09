@@ -3,11 +3,18 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  namespace :api do
-    resources :users
-  end
-
-  namespace :api do
-    resources :doctors
+    
+    namespace :api do
+      resources :doctors do
+        resources :appointments
+        get '/doctorId/unappointmented', to: 'appointments#unappointmentedUsers'
+        get '/doctorId/appointmented', to: 'appointments@appointmentedUsers'
+        get '/doctorUsers',to: 'doctors#doctorUsers'
+      end
+      
+      resources :users do
+        get'/userDoctors',to: 'users#userDoctors'
+    end
+ 
   end
 end

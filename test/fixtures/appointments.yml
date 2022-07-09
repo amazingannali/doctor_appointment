@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adate: 2022-07-01 16:46:05
+  atime: 2022-07-01 16:46:05
+  user: MyString
+  note: MyText
+  doctor: one
+  user: one
+
+two:
+  adate: 2022-07-01 16:46:05
+  atime: 2022-07-01 16:46:05
+  user: MyString
+  note: MyText
+  doctor: two
+  user: two

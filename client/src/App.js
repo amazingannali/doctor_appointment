@@ -7,7 +7,7 @@ import Doctors from './components/doctors/Doctors';
 import DoctorShow from './components/doctors/DoctorShow';
 import Users from './components/users/Users';
 import UserShow from './components/users/UserShow';
-
+import Appointments from './components/appointments/Appointments';
 
 const App = () => (
   <>
@@ -19,6 +19,7 @@ const App = () => (
        <Route path='/doctors/:id' element={<DoctorShow />} />
        <Route path='/users' element={<Users />} />
        <Route path='/users/:id' element={<UserShow />} />
+       <Route path='/:doctorId/appointments' element={<Appointments />} />
        <Route path='/*' element={<Nomatch />} />
 
      </Routes>

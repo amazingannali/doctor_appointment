@@ -14,7 +14,7 @@ User.delete_all
    first: Faker::Name.first_name,
    last: Faker::Name.last_name,
    title: Faker::Types.rb_string,
-   imag: Faker::Internet.url , 
+   imag: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvY3RvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
    special: Faker::Lorem.word
 
   )
